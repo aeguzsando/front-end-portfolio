@@ -1,0 +1,47 @@
+!!!5
+%html{class:"no-js", lang:"es-mx"}
+  %head
+    %meta{charset:"utf-8"}
+    %title Los Pastelitos de Dani
+    %meta{name:"description", content:"Los mejores postres en Guanajuato ala puerta de tu hogar, calidad y servicio al mejor precio. Regala amor, regala algo dulce"}  
+    %link{rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Lobster", type:"text/css"}
+    %link{rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Pacifico", type:"text/css"}
+    %link{rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Satisfy", type:"text/css"}
+    %link{rel:"stylesheet", href:"css/normalize.css"}
+    %link{rel:"stylesheet", href:"css/bootstrap.css"}
+    %link{rel:"stylesheet", href:"css/flexboxgrid.css"}
+    %link{rel:"stylesheet", href:"css/style.css"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+  %body
+    ="<!--[if lt IE 9]>"
+    %p{class:"browserupgrade"}
+      Estás usando un navegador 
+      %strong desactualizado.
+      Por favor
+      %a{href:"http://browserhappy.com/"}
+      atualiza tu navegador 
+      para una mejor
+      experiencia.      
+    ="<![endif]-->"
+    .video-container
+      %video{autoplay:true,loop:true,width:"1280",height:"720",poster:"/video/poster/bg.png"}
+        %source{src:"/video/mp4/pagebg.mp4",typ:"video/mp4"}
+        %source{src:"/video/webm/pagebg.webm",typ:"video/webm"} 
+    .row.background-fixed   
+    .row.full-height.middle-xs.center-xs.relative.up
+      .col-xs-12
+        .box.white-text
+          %img{src:"/images/logo.png", width:250}
+          %h1.white-text.pacifico-script.title.no-margin Los Pastelitos de Dani
+          %h1.satisfy-script.sub-title Regala algo Especial, Regala Algo Dulce
+          %p#is-open
+            %i.glyphicon.glyphicon-time 
+            Abierto ahora
+      %nav.fixed.top.middle-xs.navigation.white-text#navigation
+        -menu = ["Inicio", "Menú", "Galería", "Contacto", "Cómo llegar"]
+        %ul.list-inline
+          -menu.each do |item|
+            %li
+              %a= item
+      .absolute.black-bg.medium.white-text.large-padding.full-width.bottom#description Atención cálida, los mejores postres hechos con amor       
